@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Login</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Override navbar default css bg color -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+</head>
+<body style="background-color:rgba(255, 255, 128, .5);">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Company Brand Name -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="">Company A TRMS</a>
+        </div>
+    </div>
+</nav>
+<div class="container" style="background-color:#AAE0F8">
+    <div class="row" style="background-color:#AAE0F8">
+        <div class="col-md-4 col-md-offset-4 " style="background-color:#AAE0F8">
+            <div id="divlogin" class="panel-default" style="background-color:#AAE0F8">
+                <div class="panel-heading" style="background-color:#AAE0F8">
+                    <h1 class="text-center" style="background-color:#AAE0F8">Login</h1>
+                </div>
+
+                <div class="panel-body" style="background-color:#AAE0F8">
+
+                    <!-- Login -->
+                    <form id="loginForm" action="login" method="post">
+                        <!-- E-mail Address -->
+                        <div class="form-group" style="background-color:#AAE0F8">
+                            <label for="username">Username:</label> <input type="username"
+                                                                           class="form-control" id="username" name="username"
+                                                                           placeholder="Enter Username" required="required" />
+                            <label for="password">Password:</label> <input type="password"
+                                                                           class="form-control" id="password" name="password"
+                                                                           placeholder="Enter password" required="required" />
+                        </div>
+
+                        <!-- Submit -->
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-block" href="home.html">Submit</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript at the bottom -->
+<script type="text/javascript" src="login.js"></script>
+</body>
+</html>

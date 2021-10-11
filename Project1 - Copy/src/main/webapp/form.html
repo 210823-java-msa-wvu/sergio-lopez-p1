@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body style="height:1500px; background-color:rgba(255, 255, 128, .5);">
+<div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="home.html">Home</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="form.html">Create Form</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="showforms.html">View Forms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="approval.html">Approval</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="notifications.html">Notifications</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/TRMSlogout">Logout</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<br>
+
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Company Brand Name -->
+
+        <!-- Login and Logout -->
+        <ul class="nav navbar-nav navbar-right">
+            <li id="logout"><a href="home.html"> <span
+                    class="glyphicon glyphicon-log-out"></span> Logout
+            </a></li>
+        </ul>
+    </div>
+    <br>
+</nav>
+<div class="col-md-6 col-md-offset-3">
+    <div id="divlogin" class="panel-default">
+        <div class="panel-heading">
+            <h1 class="text-center">Tuition Reimbursement Form</h1>
+        </div>
+        <div class="panel-body">
+            <!-- Reimbursement Form -->
+            <form id="form" action="form" enctype="application/json" method="POST">
+                <!-- Employee ID -->
+                <!--			<input type="hidden" id="userid" name="userid" value="" />
+                                <input type="hidden" id="currentDate" name="currentDate" value="" />
+                                <input type="hidden" id="reimbamtEst" name="reimbamtEst" value="" />
+                -->
+                <!-- Event Type -->
+                <div class="form-group">
+                    <label for="typeOfEvent">Event Type:</label> <select
+                        name="typeOfEvent" class="form-control" id="typeOfEvent"
+                        required="required">
+                    <option value="" selected="selected">Select Type</option>
+                    <option value="1">"University Courses"</option>
+                    <option value="2">"Seminars"</option>
+                    <option value="3">"Certification Preparation Classes"</option>
+                    <option value="4">"Certification"</option>
+                    <option value="5">"Technical Training"</option>
+                    <option value="6">"Other"</option>
+                </select>
+                </div>
+
+                <!-- Event Description -->
+                <div class="form-group">
+                    <label for="description">Course Description:</label>
+                    <input type="text" class="form-control" id="description"
+                           name="description"
+                           placeholder="Enter Course Description "
+                           required="required">
+                </div>
+
+                <!-- Event Date -->
+                <div class="form-group">
+                    <label for="courseStart">Event Date:</label> <input type="date"
+                                                                        name="courseStart" class="form-control" id="courseStart"
+                                                                        required="required">
+                </div>
+                <!--Event location -->
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" class="form-control" id="location"
+                           name="location"
+                           placeholder="Enter  Location "
+                           required="required">
+                </div>
+
+                <!-- Reimbursement Cost -->
+                <div class="form-group">
+                    <label for="cost">Total Cost:</label> <input
+                        type="number" class="form-control" id="cost" name="cost"
+                        step="0.01" placeholder="Enter amount "
+                        required="required">
+                </div>
+
+                <!-- est Reimbursement Amount -->
+                <div class="form-group">
+                    <label for="reimbursementamount">Estimated Reimbursement
+                        Amount: </label> <input type="number" class="form-control"
+                                                name="reimbursementamount" id="reimbursementamount" max="1000"
+                                                placeholder="Estimated Amount"
+                                                disabled="disabled">
+                </div>
+
+                <!-- Event grading format -->
+                <div class="form-group">
+                    <label for="gradingFormat">Grading Format:</label> <input type="text"
+                                                                              name="gradingFormat" class="form-control" id="gradingFormat"
+                                                                              placeholder="Enter Grading Format"
+                                                                              required="required">
+                </div>
+
+                <!-- Event work related just -->
+                <div class="form-group">
+                    <label for="workRelatedJustification">Work-Related justification:</label>
+                    <input type="text" class="form-control" id="workRelatedJustification" max="1000"
+                           name="workRelatedJustification"
+                           placeholder="Enter work-related justification "
+                           required="required">
+                </div>
+
+                <!-- Work time missed -->
+                <div class="form-group">
+                    <label for="workTimeMissed">Work Time Missed:</label> <input
+                        type="number" class="form-control" id="workTimeMissed" name="workTimeMissed"
+                        step="0.5" max="1000" placeholder="Enter Time "
+                        required="required">
+                </div>
+
+                <!-- Dept Id -->
+                <div class="form-group">
+                    <label for="deptId">Department:</label> <select
+                        name="deptId" class="form-control" id="deptId"
+                        required="required">
+                    <option value="0" selected="selected">Select Department</option>
+                    <option value="1">Finance</option>
+                    <option value="2">Marketing</option>
+                    <option value="3">IT</option>
+                    <option value="4">Sales</option>
+                    <option value="5">Accounting</option>
+                    <option value="6">Other</option>-->
+                </select>
+                </div>
+
+                <!-- File Attachment -->
+                <label for="linkToFiles">Attach Supporting Documention:</label> <input
+                    type="file" id="linkToFiles" name="linkToFiles"
+                    accept=".pdf, .png, .jpeg, .jpg, .txt, .doc, .msg" /> <br />
+                <br>
+                <!-- Submit -->
+                <button id="formSubmit" class="btn btn-success btn-block">Submit</button>
+
+            </form>
+            <br>
+            <div>
+            </div>
+        </div>
+        <div class="panel-footer"></div>
+    </div>
+</div>
+<script type="text/javascript" src="form.js"></script>
+</body>
+
+</html>
