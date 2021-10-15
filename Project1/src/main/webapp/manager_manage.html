@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:rgb(155, 213, 127);">
+<head>
+
+    <meta charset="UTF-8">
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        #warning{
+            color:red;
+        }
+        .management{
+            margin: 10px;
+        }
+        .btn-primary{
+            margin:10px;
+            padding:5px;
+        }
+        fieldset{
+            background-color:rgb(155, 213, 127);
+            border:2px solid blue;
+            -moz-border-radius:8px;
+            -webkit-border-radius:8px;	
+            border-radius:8px;	
+        }
+        legend{
+            font-size:large;
+            font-weight: bold;
+        }
+    </style>
+
+    <title>Manage your reimbursements</title>
+</head>
+<body onload="loadManager()" style="background-color:rgb(155, 213, 127);">
+    <section id="display"></section>
+    <section id="tables"></section>
+    <br>
+    <section id="warning" ></section>
+    <h3>Company A TRMS</h3>
+    <div class="management">
+        <label>Reimbursement Id:
+            <input type="number" id="reimbursement_id" name="reimbursement_id">
+        </label>
+        <br>
+        <fieldset>
+        <legend>Request more information from applicant</legend>
+        <button class="btn btn-primary" type="button" onclick="requestInfoE()" id="request_info_e">Request info from applicant</button><br>
+        </fieldset><br>
+        <fieldset>
+
+        </label>
+
+        </fieldset><br>
+        <fieldset>
+        <legend>Sign reimbursement</legend>
+        <button class="btn btn-primary" type="button" onclick="signReimbursement()" id="sign">Sign the reimbursement</button><br>
+        </fieldset><br>
+        <fieldset>
+        <legend>Decline reimbursement</legend>
+        <label>Reason for decline:
+            <input type="text" id="reason" name="reason">
+        </label>
+        <button class="btn btn-primary" type="button" onclick="declineReimbursement()" id="decline">Decline the reimbursement</button><br>
+        </fieldset><br>
+        <fieldset>
+        <legend>Confirm reimbursement</legend>
+        <button class="btn btn-primary" type="button" onclick="confirm()" id="confirm">Confirm Reimbursement</button><br>
+        </fieldset><br>
+        <fieldset>
+            <legend>Upload info for reimbursement</legend>
+        <button class="btn btn-primary" type="button" onclick="uploadInfo()" id="upload">Upload Info</button><br>
+        </fieldset>
+
+        <button class="btn btn-primary" type="button" onclick="loadManager()" id="refresh">Refresh Info</button>
+        <br>
+        <br>
+        <button class="btn btn-primary" type="button" onclick="redirectBack()" id="back">Back</button>
+    </div>
+    <script src="manager_manage.js"></script>
+</body>
+</html>

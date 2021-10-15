@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:rgb(155, 213, 127);">
+    <head>
+
+        <title>Submit a reimbursement</title>
+
+    </head>
+    <body style="background-color:rgb(155, 213, 127);">
+        <!--Form for user to submit feedback to website's owner-->
+        <div>
+            <form action="http://localhost:8083/Project1/submit_reimbursement" target = "_self" method="POST">
+                <fieldset>
+                    <legend>Please fill the Form and then click "submit-review"</legend>
+                    <label>Start date:
+                        <input type="date" name="startdate" required>
+                    </label>
+                    <br>
+                    <br>
+                    <!--Another way of labeling-->
+                    <label>Location: 
+                        <input type="text" name="location" placeholder="Location" required>
+                    </label>
+                    <br>
+
+                    <br>
+                    <label>Total cost: 
+                        <input type="number" step="0.01" name="cost" required>
+                    </label>
+                    <br>
+                    <br>
+
+                    <label>Pass grade: 
+                        <input type="number" name="pass_grade" required>
+                    </label>
+
+                    <br>
+                    <br>
+
+                    <label>Grading format: 
+                        <select name="grade_format">
+                            <option value=7>presentation</option>
+                            <option value=5>grade</option>
+                        </select>
+                    </label>
+
+                    <br>
+                    <br>
+
+                    <label>Type of event: 
+                        <select name="type">
+                            <option value=0>University course</option>
+                            <option value=1>Seminar</option>
+                            <option value=2>Certification Preparation course</option>
+                            <option value=3>Certification</option>
+                            <option value=4>Technical training</option>
+                            <option value=5>Other</option>
+                        </select>
+                    </label>
+                    <br>
+                    <br>
+                    <label>Justification for Reimbursement:<br>
+                        <textarea name="note" rows="4" cols="150" placeholder="Fill Justification" required></textarea>
+                    </label>
+                </fieldset>
+                <br>
+                <input type="submit" class="btn btn-primary" value="submit-review">
+                <br>
+                <br>
+                <br>
+                <button class="btn btn-primary" onclick="getBack()">Back</button>
+            </form>
+        </div>
+        <script src="login.js"></script>
+    </body>
+</html>

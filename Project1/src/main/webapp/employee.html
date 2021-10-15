@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:rgb(155, 213, 127);">
+<head>
+    <link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Employee page</title>
+</head>
+<body onload="loadEmployee()" style="background-color:rgb(155, 213, 127);">
+    <section id="display"></section>
+    <br>
+    <h3>Please choose an option below :)</h3>
+    <button type="button" class="btn btn-primary" onclick="redirectEmployeeManage()" id="manage_reimbursements">Manage my Reimbursements</button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="redirectEmployeeSubmit()" id="go_submit">Request a new Reimbursement</button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="reloadEmployee()" id="refresh">Refresh info</button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="logEmployeeOut()" id="logout">Log out</button>
+    <script src="employee.js"></script>
+</body>
+</html>

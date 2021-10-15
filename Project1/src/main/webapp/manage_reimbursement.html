@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:rgb(155, 213, 127);">
+<head>
+
+    <meta charset="UTF-8">
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        #warning{
+            color: #ff1e00;
+        }
+
+    </style>
+
+    <title>Manage your reimbursements</title>
+</head>
+<body onload="loadEmployee()" style="background-color:rgb(155, 213, 127);">
+    <section id="display"></section>
+    <section id="tables"></section>
+    <br>
+    <section id="warning" ></section>
+    <h3>Company A TRMS/ Employee portal</h3>
+    <div class="management">
+        <label>Reimbursement Id:
+            <input type="number" id="reimbursement_id" name="reimbursement_id">
+        </label>
+        <br>
+        <fieldset>
+            <legend>Upload info:</legend>
+        <button class="btn btn-primary" type="button" onclick="uploadInfo()" id="upload_info">Upload Additional Info</button><br>
+        </fieldset><br>
+        <fieldset>
+            <legend>Upload presentation:</legend>
+        <button class="btn btn-primary" type="button" onclick="uploadPresentation()" id="upload_presentation">Upload Presentation</button><br>
+        </fieldset><br>
+        <fieldset>
+            <legend>Upload score:</legend>
+        <label>What is your score:
+            <input type="number" id="score" name="score">
+        </label>
+        <button class="btn btn-primary" type="button" onclick="uploadScore()" id="upload_score">Upload Score</button><br>
+        </fieldset><br>
+        <fieldset>
+
+        </fieldset>
+        <button class="btn btn-primary" type="button" onclick="loadEmployee()" id="refresh">Refresh Info</button>
+        <button class="btn btn-primary" type="button" onclick="redirectBack()" id="back">Back</button>
+    </div>
+    <script src="employee_manage.js"></script>
+</body>
+</html>
